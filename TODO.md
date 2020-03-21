@@ -11,3 +11,6 @@
 - [ ] connect to cloud database
 - [ ] update skills
 - [ ] send notification mails
+- [ ] domain name
+- [ ] use unsafe html for project description
+- [ ] Choose coding challenges to show
