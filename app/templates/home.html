@@ -1,0 +1,383 @@
+{% extends 'layout.html'%} {% load static %} {% block content %}
+
+<nav
+  class="navbar navbar-b navbar-trans navbar-expand-md fixed-top"
+  id="mainNav"
+>
+  <div class="container">
+    <div style="font-family: 'Metamorphous', cursive;">
+      <a class="navbar-brand js-scroll" href="{% url 'app:home' %}">RN</a>
+    </div>
+    <button
+      class="navbar-toggler collapsed"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarDefault"
+      aria-controls="navbarDefault"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div
+      class="navbar-collapse collapse justify-content-end"
+      id="navbarDefault"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll" href="#portfolio">PortFolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div
+  id="home"
+  class="intro route bg-image"
+  style="background-image: url(/static/images/intro-bg.jpg)"
+>
+  <div class="overlay-itro"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h1 class="intro-title mb-4">Ruidy Nemausat</h1>
+        <p class="intro-subtitle">
+          <span class="text-slider-items"
+            >PhD Physics,Full-Stack Software Engineer,Data Scientist,Machine
+            Learning Engineer</span
+          ><strong class="text-slider"></strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="about" class="about-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Curriculum
+          </h3>
+          <p class="subtitle-a">
+            Education & Experience
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box-shadow-full">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <!-- <div class="col-sm-6 col-md-5">
+                  <div class="about-img">
+                    <img
+                      src="{% static 'images/myPic.jpg' %}"
+                      class="img-fluid rounded b-shadow-a"
+                      alt="ruidy_nemausat"
+                    />
+                  </div>
+                </div> -->
+                <div class="col-sm-6 col-md-7">
+                  <div class="about-info">
+                    <p>
+                      <span class="title-s">Name: </span>
+                      <span>Ruidy Nemausat</span>
+                    </p>
+                    <p>
+                      <span class="title-s">Profile: </span>
+                      <span>Software, Data Engineer</span>
+                    </p>
+                    <p>
+                      <span class="title-s">Email: </span>
+                      <span
+                        ><a href="mailto:ruidy.nemausat@gmail.com"
+                          >ruidy.nemausat@gmail.com</a
+                        ></span
+                      >
+                    </p>
+                    <p>
+                      <span class="title-s">Telephone: </span>
+                      <span
+                        ><a href="tel:+33658961279"
+                          >(+33) 6 58 96 12 79</a
+                        ></span
+                      >
+                    </p>
+                    <p>
+                      <span class="title-s">Links: </span>
+                      <span
+                        ><a href="https://github.com/rjNemo" target="_blank"
+                          ><ion-icon name="logo-github"></ion-icon
+                        ></a>
+                      </span>
+                      <span
+                        ><a
+                          href="https://www.linkedin.com/in/ruidy-nemausat-522b4069/"
+                          target="_blank"
+                          ><ion-icon name="logo-linkedin"></ion-icon
+                        ></a>
+                      </span>
+                    </p>
+                    <p>
+                      <span class="title-s">CV: </span>
+                      <span
+                        ><a
+                          href="https://drive.google.com/file/d/16Uu94q4cZf-c5q5bYcr0VrvedE0g87yB/view?usp=sharing"
+                          target="_blank"
+                          ><ion-icon name="document"></ion-icon></a
+                      ></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-me pt-4 pt-md-0">
+                <div class="title-box-2">
+                  <h5 class="title-left">
+                    Who am I?
+                  </h5>
+                </div>
+                <p>
+                  PhD Physics major, I am currently employed as beamline
+                  scientist in
+                  <a
+                    href="http://photon-science.desy.de/facilities/petra_iii/beamlines/p65_applied_xafs/contact__staff/index_eng.html"
+                    target="_blank"
+                    >DESY</a
+                  >
+                  (Hamburg, Germany). My main attributions are scientific
+                  software development and maintainance, and large dataset
+                  treatment. I have a great interest in software engineering and
+                  machine learning.
+                </p>
+                <p>
+                  I have 4-year professional experience in Python, I also used
+                  C++ and MatLab. During my PhD in Physics (Sorbonnes
+                  Université, Paris), I contributed to XSpectra module from the
+                  open-source scientific library
+                  <a href="https://www.quantum-espresso.org/" target="_blank"
+                    >Quantum-ESPRESSO</a
+                  >, written in Fortran.
+                </p>
+                <p>
+                  I consider myself as a perpetual learner. Aside of my work, I
+                  developed modern web applications using Django, React and .NET
+                  Core for various purposes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="title-box text-center">
+      <h3 class="title-a">
+        Software Skills
+      </h3>
+      <!-- <p class="subtitle-a">
+        Some of my personal projects
+      </p> -->
+      <div class="line-mf"></div>
+    </div>
+  </div>
+</div>
+<div
+  class="section-counter paralax-mf bg-image"
+  style="background-image: url(static/images/counters-bg.jpg)"
+>
+  <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="title-box-2">
+                    <h5 class="title-left">
+                        Front-end
+                    </h5>
+                  </div>
+                <p>
+                  <span class="title-s">HTML5: </span>
+                  <span>Proficient</span>
+                </p>
+                <p>
+                  <span class="title-s">CSS (Bootstrap4, Materialize): </span>
+                  <span>Proficient</span>
+                </p>
+                <p>
+                  <span class="title-s">Javascript: </span>
+                  <span>Advanced</span>
+                </p>
+                <p>
+                  <span class="title-s">ReactJs: </span>
+                  <span>Intermediate</span>
+                </p>
+              </div>
+              <div class="col-md-6">
+                <div class="title-box-2">
+                    <h5 class="title-left">
+                        Back-end
+                    </h5>
+                  </div>
+                <p>
+                  <span class="title-s">Python: </span>
+                  <span>Proficient (Django, Jupyter, PyQt)</span>
+                </p>
+                <p>
+                  <span class="title-s">C#: </span>
+                  <span>Intermediate (.NET Core)</span>
+                </p>
+                <p>
+                  <span class="title-s">SQL: </span>
+                  <span>Advanced (PostgreSQL, MySQL, SQLite)</span>
+                </p>
+                <p>
+                  <span class="title-s">Docker: </span>
+                  <span>Advanced</span>
+                </p>
+                <p>
+                  <span class="title-s">NginX: </span>
+                  <span>Intermediate</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="portfolio" class="portfolio-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Portfolio
+          </h3>
+          <p class="subtitle-a">
+            Some of my personal projects
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for p in project_list %}
+
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="{% url 'app:project' p.pk %}">
+            <div class="work-img">
+              <img
+                src="{{p.picture_URL}}"
+                alt="{{p.title}}"
+                class="img-fluid"
+              />
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">{{p.title}}</h2>
+
+                  <div class="w-more">
+                    {% for t in p.tags%} 
+                    <span class="w-ctegory">@tag</span>
+                   {%endfor%} 
+                  <span class="w-ctegory">project</span>, 
+                  <span class="w-date">{{p.creation_date}}</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <span class="ion-ios-plus-outline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+</section>
+
+
+<!-- <section id="challenges" class="portfolio-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Coding Challenges
+          </h3>
+          <p class="subtitle-a">
+            A collection of coding challenges I solved
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      @foreach (var project in Model) { if (project.Type == 1) {
+      <div class="col-md-4">
+        <div class="work-box">
+          <a asp-action="Details" asp-route-id="@project.Id">
+            <div class="work-img">
+              <img
+                src="@project.PictureUrl"
+                alt="@project.Title"
+                class="img-fluid"
+                asp-append-version="true"
+              />
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">@project.Title</h2>
+
+                  <div class="w-more">
+                    <span class="w-ctegory">project.Tag</span> /
+                    <span class="w-date">project.Date</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <span class="ion-ios-plus-outline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      } }
+    </div>
+  </div>
+</section> -->
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'layout.html' %} {% load static %} {% block content %}
+
+<nav
+  class="navbar navbar-b navbar-trans navbar-expand-md fixed-top"
+  id="mainNav"
+>
+  <div class="container">
+    <div style="font-family: 'Metamorphous', cursive;">
+      <a class="navbar-brand js-scroll" href="{% url 'app:home' %}">RN</a>
+    </div>
+    <button
+      class="navbar-toggler collapsed"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarDefault"
+      aria-controls="navbarDefault"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div
+      class="navbar-collapse collapse justify-content-end"
+      id="navbarDefault"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div
+  id="home"
+  class="intro intro-single route bg-image"
+  style="background-image: url(/static/images/counters-bg.jpg)"
+>
+  <div class="overlay-itro"></div>
+</div>
+
+<section id="portfolio" class="portfolio-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Portfolio
+          </h3>
+          <p class="subtitle-a">
+            Some of my personal projects
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      {%for p in project_list%}
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="{% url 'app:project' p.pk %}">
+            <div class="work-img">
+              <img
+                src="/{{p.picture_URL}}"
+                alt="{{p.title}}"
+                class="img-fluid"
+              />
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">{{p.title}}</h2>
+                  <div class="w-more">
+                    {% for t in p.tags%}
+                    <span class="w-ctegory">@tag</span>
+                    {%endfor%}
+                    <span class="w-ctegory">project</span>,
+                    <span class="w-date">{{p.creation_date}}</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <span class="ion-ios-plus-outline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

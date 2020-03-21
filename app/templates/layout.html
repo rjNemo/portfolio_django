@@ -1,0 +1,260 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruidy Nemausat | Software Engineer</title>
+
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'images/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'images/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'images/favicon-16x16.png' %}"
+    />
+    <link rel="manifest" href="{% static 'images/site.webmanifest' %}" />
+
+    <link
+      href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'lib/ionicons/css/ionicons.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'lib/lightbox/css/lightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Metamorphous&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+
+  <body id="page-top">
+    <div class="">
+      <main role="main" class="">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+
+    <section
+      class="paralax-mf footer-paralax bg-image sect-mt4 route"
+      style="background-image: url(/static/images/overlay-bg.jpg)"
+    >
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="contact-mf">
+              <div id="contact" class="box-shadow-full">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        Contact Me
+                      </h5>
+                    </div>
+                    <div>
+                      <form action="/contact/" method="POST">
+                        {% csrf_token %}
+                        <div class="text-danger"></div>
+                        <div class="row">
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="sender_name"
+                                id="sender_name"
+                                placeholder="Your Name"
+                              />
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input
+                                type="email"
+                                class="form-control"
+                                name="sender_email"
+                                id="sender_email"
+                                placeholder="Your Email"
+                                data-rule="email"
+                                data-msg="Please enter a valid email"
+                              />
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                data-rule="minlen:4"
+                                data-msg="Please enter at least 8 chars of subject"
+                              />
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <textarea
+                                class="form-control"
+                                id="message"
+                                name="message"
+                                rows="5"
+                                data-rule="required"
+                                data-msg="Please leave me a message"
+                                placeholder="Message"
+                              ></textarea>
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <input
+                              type="submit"
+                              class="button button-a button-big button-rouded"
+                              value="Send message"
+                            />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="title-box-2 pt-4 pt-md-0">
+                      <h5 class="title-left">
+                        Get in Touch
+                      </h5>
+                    </div>
+                    <div class="more-info">
+                      <p class="lead">
+                        Currently employed by Deutches Elektronen-Synchrotron
+                        (<a
+                          href="http://photon-science.desy.de/facilities/petra_iii/beamlines/p65_applied_xafs/contact__staff/index_eng.html"
+                          target="_blank"
+                          >DESY</a
+                        >) as beamline scientist. I am avalaible for new job
+                        opportunities in Research & Development, Data Science
+                        and Software Enginnering.
+                      </p>
+                      <ul class="list-ico">
+                        <li>
+                          <span class="ion-ios-location"></span>
+                          <a
+                            href="https://goo.gl/maps/pJNujB6kV1wgHsQp6"
+                            target="_blank"
+                            >Wedeler Landstraße 111, 22559 Hamburg (Germany)</a
+                          >
+                        </li>
+                        <li>
+                          <span class="ion-ios-telephone"></span>
+                          <a href="tel:+33658961279">(+33) 6 58 96 12 79</a>
+                        </li>
+                        <li>
+                          <span class="ion-email"></span>
+                          <a href="mailto:ruidy.nemausat@gmail.com"
+                            >ruidy.nemausat@gmail.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="socials">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.linkedin.com/in/ruidy-nemausat-522b4069/"
+                            target="_blank"
+                            ><span class="ico-circle"
+                              ><i class="ion-social-linkedin"></i></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/rjNemo" target="_blank"
+                            ><span class="ico-circle"
+                              ><i class="ion-social-github"></i></span
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="copyright-box">
+                <p class="copyright">
+                  &copy; 2020, <strong>Ruidy Nemausat</strong> 👨‍💻 All Rights
+                  Reserved
+                </p>
+                <p>
+                  <a href="/privacy">Terms</a>
+                  - <a href="/admin">Admin</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div>
+
+    <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+    <script src="{% static 'lib/popper/popper.min.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/jquery.counterup.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'lib/typed/typed.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
