@@ -1,6 +1,9 @@
 # Go-Wiki
 
-![Python](https://img.shields.io/github/pipenv/locked/python-version/rjNemo/portfolio?style=flat-square) ![Django](https://img.shields.io/github/pipenv/locked/python-version/rjNemo/portfolio?style=flat-square) [![License](https://img.shields.io/github/license/rjNemo/portfolio)](LICENSE.md) ![Release](https://img.shields.io/github/v/release/rjNemo/portfolio) ![Tag](https://img.shields.io/github/v/tag/rjNemo/portfolio) ![logo](/app/static/images/apple-touch-icon.png)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+![Django](https://img.shields.io/pypi/djversions/django-magnificent-messages) [![License](https://img.shields.io/github/license/rjNemo/portfolio_django)](LICENSE.md) ![Release](https://img.shields.io/github/v/release/rjNemo/portfolio_django) ![Tag](https://img.shields.io/github/v/tag/rjNemo/portfolio_django)
+
+![logo](/app/static/images/apple-touch-icon.png)
 
 Personal portfolio
 

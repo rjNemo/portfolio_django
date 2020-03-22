@@ -94,7 +94,7 @@
                 </div> -->
                 <div class="col-sm-6 col-md-7">
                   <div class="about-info">
-                    <p>
+                    <p class="lead">
                       <span class="title-s">Name: </span>
                       <span>Ruidy Nemausat</span>
                     </p>
@@ -219,19 +219,33 @@
                     </h5>
                   </div>
                 <p>
-                  <span class="title-s">HTML5: </span>
+                  <!-- <ion-icon name="logo-html5"></ion-icon> -->
+                  <i class="devicon-html5-plain colored"></i>
+                  <span class="title-s"> HTML5 </span>
                   <span>Proficient</span>
                 </p>
                 <p>
-                  <span class="title-s">CSS (Bootstrap4, Materialize): </span>
-                  <span>Proficient</span>
+                  <!-- <ion-icon name="logo-css3"></ion-icon> -->
+                  <i class="devicon-css3-plain colored"></i>
+                  <span class="title-s">CSS </span>
+                  <span>Proficient (Bootstrap4, Materialize)</span>
                 </p>
                 <p>
-                  <span class="title-s">Javascript: </span>
+                  <!-- <i class="devicon-javascript-plain"></i> -->
+                  <i class="devicon-javascript-plain colored"></i>
+                  <span class="title-s">JavaScript</span>
                   <span>Advanced</span>
                 </p>
                 <p>
-                  <span class="title-s">ReactJs: </span>
+                  <!-- <i class="devicon-typescript-plain"></i> -->
+                  <i class="devicon-typescript-plain colored"></i>
+
+                  <span class="title-s">TypeScript </span>
+                  <span>Intermediate</span>
+                </p>
+                <p>
+                  <i class="devicon-react-plain colored"></i>
+                  <span class="title-s">ReactJs</span>
                   <span>Intermediate</span>
                 </p>
               </div>
@@ -242,23 +256,29 @@
                     </h5>
                   </div>
                 <p>
-                  <span class="title-s">Python: </span>
-                  <span>Proficient (Django, Jupyter, PyQt)</span>
+                  <!-- <ion-icon name="logo-python"></ion-icon> -->
+                  <i class="devicon-python-plain"></i>
+                  <span class="title-s">Python </span>
+                  <span>Proficient (Django, Jupyter, scikit-learn)</span>
                 </p>
                 <p>
-                  <span class="title-s">C#: </span>
+                  <i class="devicon-csharp-plain colored"></i>
+                  <span class="title-s">C# </span>
                   <span>Intermediate (.NET Core)</span>
                 </p>
                 <p>
-                  <span class="title-s">SQL: </span>
+                  <i class="devicon-postgresql-plain colored"></i>
+                  <span class="title-s">SQL </span>
                   <span>Advanced (PostgreSQL, MySQL, SQLite)</span>
                 </p>
                 <p>
-                  <span class="title-s">Docker: </span>
+                  <i class="devicon-docker-plain colored"></i>
+                  <span class="title-s">Docker </span>
                   <span>Advanced</span>
                 </p>
                 <p>
-                  <span class="title-s">NginX: </span>
+                  <i class="devicon-nginx-original colored"></i>
+                  <span class="title-s">NginX </span>
                   <span>Intermediate</span>
                 </p>
               </div>
@@ -305,10 +325,11 @@
                   <h2 class="w-title">{{p.title}}</h2>
 
                   <div class="w-more">
-                    {% for t in p.tags%} 
-                    <span class="w-ctegory">@tag</span>
+                    <span class="w-ctegory">Tags: 
+                    {% for t in p.tags.all%} 
+                      <i class="devicon-{{t.value}}-plain colored"></i>
                    {%endfor%} 
-                  <span class="w-ctegory">project</span>, 
+                  </span> <br/>
                   <span class="w-date">{{p.creation_date}}</span>
                   </div>
                 </div>

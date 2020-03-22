@@ -73,8 +73,6 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config(
-    conn_max_age=600, ssl_require=True)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -112,8 +110,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = '/static/'
 
-django_heroku.settings(locals())
+ENV = os.getenv("ENV")
+if ENV == "HEROKU":
+    DATABASES['default'] = dj_database_url.config(
+        conn_max_age=600, ssl_require=True)
+    django_heroku.settings(locals())

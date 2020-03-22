@@ -1,14 +1,14 @@
 # TO DO
 
-- [ ] Update README
+- [x] Update README
 - [x] Write models: project
 - [x] Write controllers: Home, IndexProjects, ViewProjects,
 - [x] Write forms: Contact form
 - [x] Templates
 - [ ] Add tags
-- [ ] Structure folders
+- [x] Structure folders
 - [ ] write tests
-- [ ] connect to cloud database
+- [x] connect to cloud database
 - [ ] update skills
 - [ ] send notification mails
 - [ ] domain name

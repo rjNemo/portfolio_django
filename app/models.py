@@ -1,6 +1,13 @@
 from django.db import models
 
 
+class Tag(models.Model):
+    value = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.value
+
+
 class Project(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField(blank=True)
@@ -8,6 +15,7 @@ class Project(models.Model):
     link = models.CharField(max_length=200)
     repo = models.CharField(max_length=200)
     creation_date = models.DateField(auto_now_add=True)
+    tags = models.ManyToManyField(Tag)
 
     class Meta:
         ordering = ["-creation_date"]
