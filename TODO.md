@@ -5,12 +5,12 @@
 - [x] Write controllers: Home, IndexProjects, ViewProjects,
 - [x] Write forms: Contact form
 - [x] Templates
-- [ ] Add tags
+- [x] Add tags
 - [x] Structure folders
 - [ ] write tests
 - [x] connect to cloud database
 - [ ] update skills
-- [ ] send notification mails
+- [ ] send notification mails, create success and fail pages
 - [ ] domain name
-- [ ] use unsafe html for project description
+- [x] use unsafe html for project description
 - [ ] Choose coding challenges to show

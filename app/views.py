@@ -1,10 +1,28 @@
-from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView, ListView
 from django.urls import reverse
 from django.shortcuts import redirect
 from app.models import Project, Mail
 from app.forms import MailForm
 from app.service import send_mails
+
+
+class Home(ListView):
+    model = Project
+    template_name = "home.html"
+
+
+class IndexProjects(ListView):
+    model = Project
+    template_name = "index.html"
+
+
+class ViewProject(DetailView):
+    model = Project
+    template_name = "view.html"
+
+
+class Privacy(TemplateView):
+    template_name = "privacy.html"
 
 
 def contact_view(request):
@@ -28,22 +46,3 @@ def contact_view(request):
     # send_mails(mail_params)
 
     return redirect("app:home")
-
-
-class Home(ListView):
-    model = Project
-    template_name = "home.html"
-
-
-class IndexProjects(ListView):
-    model = Project
-    template_name = "index.html"
-
-
-class ViewProject(DetailView):
-    model = Project
-    template_name = "view.html"
-
-
-class Privacy(TemplateView):
-    template_name = "privacy.html"
