@@ -4,6 +4,9 @@ from django.db import models
 class Tag(models.Model):
     value = models.CharField(max_length=50)
 
+    class Meta:
+        ordering = ["value"]
+
     def __str__(self):
         return self.value
 
@@ -30,6 +33,9 @@ class Mail(models.Model):
     subject = models.CharField(max_length=100)
     message = models.TextField()
     sent_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-sent_date"]
 
     def __str__(self):
         return f"Mail from {self.sender_name} <{self.sender_email}> - Object: {self.subject}"
