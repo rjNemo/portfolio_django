@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.shortcuts import redirect
 from app.models import Project, Mail
 from app.forms import MailForm
-from app.service import send_mails
+from app.services import send_mails
 
 
 class Home(ListView):
