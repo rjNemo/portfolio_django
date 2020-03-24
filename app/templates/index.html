@@ -59,7 +59,7 @@
     </div>
 
     <div class="row">
-      {%for p in project_list%}
+      {% for p in project_list %}
       <div class="col-md-4">
         <div class="work-box">
           <a href="{% url 'app:project' p.pk %}">
@@ -75,10 +75,9 @@
                 <div class="col-sm-8">
                   <h2 class="w-title">{{p.title}}</h2>
                   <div class="w-more">
-                    {% for t in p.tags%}
-                    <span class="w-ctegory">@tag</span>
-                    {%endfor%}
-                    <span class="w-ctegory">project</span>,
+                    Tags: {% for t in p.tags.all %}
+                    <i class="devicon-{{t.value}}-plain colored"></i>
+                    {% endfor %}
                     <span class="w-date">{{p.creation_date}}</span>
                   </div>
                 </div>

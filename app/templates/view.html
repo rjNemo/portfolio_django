@@ -86,9 +86,9 @@
               </li>
               <li>
                 <span class="w-ctegory"
-                  >Tags: {% for t in project.tags.all%}
+                  >Tags: {% for t in project.tags.all %}
                   <i class="devicon-{{t.value}}-plain colored"></i>
-                  {%endfor%}
+                  {% endfor %}
                 </span>
               </li>
             </ul>
@@ -99,7 +99,7 @@
               href="{{project.link}}"
               target="_blank"
               class="button button-a button-big button-rouded"
-              >See Demo</a
+              >Live Demo</a
             >
           </div>
         </div>
