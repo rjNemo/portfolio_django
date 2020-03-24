@@ -27,6 +27,11 @@
     >
       <ul class="navbar-nav">
         <li class="nav-item">
+          <a class="nav-link js-scroll" href="{% url 'app:projects' %}"
+            >PortFolio</a
+          >
+        </li>
+        <li class="nav-item">
           <a class="nav-link js-scroll" href="#contact">Contact</a>
         </li>
       </ul>
@@ -35,11 +40,26 @@
 </nav>
 
 <div
-  id="home"
   class="intro intro-single route bg-image"
-  style="background-image: url(/static/images/counters-bg.jpg)"
+  style="background-image: url(/static/images/404.gif)"
 >
-  <div class="overlay-itro"></div>
+  <div class="overlay-mf"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h2 class="intro-title mb-4">{{p.title}}</h2>
+        <ol class="breadcrumb d-flex justify-content-center">
+          <li class="breadcrumb-item">
+            <a href="{% url 'app:home' %}">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'app:projects' %}">404 Not Found</a>
+          </li>
+          <li class="breadcrumb-item active">{{project.title}}</li>
+        </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 <section id="portfolio" class="portfolio-mf sect-pt4 route">
@@ -48,52 +68,26 @@
       <div class="col-sm-12">
         <div class="title-box text-center">
           <h3 class="title-a">
-            Portfolio
+            Nothing Here
           </h3>
-          <p class="subtitle-a">
-            Some of my personal projects
-          </p>
           <div class="line-mf"></div>
         </div>
       </div>
     </div>
 
     <div class="row">
-      {% for p in project_list %}
-      <div class="col-md-4">
-        <div class="work-box">
-          <a href="{% url 'app:project' p.pk %}">
-            <div class="work-img">
-              <img
-                src="/{{p.picture_URL}}"
-                alt="{{p.title}}"
-                class="img-fluid"
-              />
-            </div>
-            <div class="work-content">
-              <div class="row">
-                <div class="col-sm-8">
-                  <h2 class="w-title">{{p.title}}</h2>
-                  <div class="w-more">
-                    Tags: {% for t in p.tags.all %}
-                    <i class="devicon-{{t.value}}-plain colored"></i>
-                    {% endfor %}<br />
-                    <span class="w-date">{{p.creation_date}}</span>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="w-like">
-                    <span class="ion-ios-plus-outline"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
+      <div class="col-md-12">
+        <div class="post-box">
+          <div class="post-thumb">
+            <img
+              src="/static/images/404.gif"
+              class="img-fluid"
+              alt="{{project.title}}"
+            />
+          </div>
         </div>
       </div>
-      {% endfor %}
     </div>
   </div>
 </section>
-
 {% endblock %}
