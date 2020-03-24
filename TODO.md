@@ -9,8 +9,8 @@
 - [x] Structure folders
 - [ ] write tests
 - [x] connect to cloud database
-- [ ] update skills
-- [ ] send notification mails, create success and fail pages
+- [x] update skills
+- [ ] send notification mails, create success and fail pages. Use external API
 - [ ] domain name
 - [x] use unsafe html for project description
 - [ ] Choose coding challenges to show
