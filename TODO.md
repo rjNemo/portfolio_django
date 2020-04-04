@@ -10,7 +10,7 @@
 - [ ] write tests
 - [x] connect to cloud database
 - [x] update skills
-- [ ] send notification mails, create success and fail pages. Use external API
+- [x] send notification mails, create success and fail pages. Use external API
 - [ ] domain name
 - [x] use unsafe html for project description
 - [ ] Choose coding challenges to show

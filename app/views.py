@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.shortcuts import redirect
 from app.models import Project, Mail
 from app.forms import MailForm
-from app.services import send_mails
+from app.services import send_confirmation, send_notification
 
 
 class Home(ListView):
@@ -42,7 +42,7 @@ def contact_view(request):
         message=message
     )
 
-    print(mail_params)
-    # send_mails(mail_params)
+    send_confirmation(sender_name, sender_email)
+    send_notification(sender_name, sender_email, subject, message)
 
     return redirect("app:home")
