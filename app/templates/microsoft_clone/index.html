@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'css/microsoft_style.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+    <title>Microsoft (Un)Official Homepage</title>
+  </head>
+  <body>
+      <div class="menu-btn">
+          <i class="fas fa-bars fa-2x"></i>
+      </div>
+    <div class="container">
+      <!-- Nav -->
+      <nav class="main-nav">
+        <img src="{% static 'images/microsoft/logo.png' %}" alt="Microsoft_logo" class="logo" />
+        <ul class="main-menu">
+          <li><a href="#">Microsoft 365</a></li>
+          <li><a href="#">Office</a></li>
+          <li><a href="#">Windows</a></li>
+          <li><a href="#">Surface</a></li>
+          <li><a href="#">Xbox</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+
+        <ul class="right-menu">
+          <li>
+            <a href="#"><i class="fas fa-search"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Showcase -->
+      <header class="showcase">
+        <h2>Work remotely with Microsoft Teams</h2>
+        <p>
+          Chat, meet, call, and collaborate no matter where you are, for free
+        </p>
+        <a href="#" class="btn"
+          >Learn more <i class="fas fa-chevron-right"></i
+        ></a>
+      </header>
+
+      <!-- Cards Section 1 -->
+      <section class="cards">
+        <!-- Card 1 -->
+        <div>
+          <img src="{% static 'images/microsoft/card1.jpeg' %}" alt="card" />
+          <h3>This is your 365</h3>
+          <p>Discover what's possible every day with Office 365</p>
+          <a href="#">
+            For up to 6 people <i class="fas fa-chevron-right"></i>
+          </a>
+          <a href="#">For 1 person <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <!-- Card 2 -->
+        <div>
+          <img src="{% static 'images/microsoft/card2.jpeg' %}" alt="card" />
+          <h3>Xbox One X</h3>
+          <p>
+            The world’s most powerful console.
+          </p>
+          <a href="#"> Shop now <i class="fas fa-chevron-right"></i> </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div>
+          <img src="{% static 'images/microsoft/card3.jpeg' %}" alt="card" />
+          <h3>New Surface Laptop 3</h3>
+          <p>
+            Express yourself powerfully with a thin, light and elegant design
+            faster performance and up to 11.5 hours battery life.
+          </p>
+          <a href="#"> Shop now <i class="fas fa-chevron-right"></i> </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div>
+          <img src="{% static 'images/microsoft/card4.jpeg' %}" alt="card" />
+          <h3>Free home and family resources</h3>
+          <p>
+            Discover tools, tips, and more from Microsoft to help you learn,
+            play, and work from home.
+          </p>
+          <a href="#"> Explore now <i class="fas fa-chevron-right"></i> </a>
+        </div>
+      </section>
+
+      <!-- Promo Banner -->
+      <section class="promo-banner">
+        <div class="content">
+          <h2>New Microsoft 365, available April 21</h2>
+          <p>
+            Achieve more with innovative Office apps, intelligent cloud
+            services, and world-class security
+          </p>
+          <a href="#" class="btn"
+            >Learn more <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+      </section>
+
+      <!-- Cards Section 2 -->
+      <section class="cards">
+        <!-- Card 5 -->
+        <div>
+          <img src="{% static 'images/microsoft/card5.jpeg' %}" alt="card" />
+          <h3>Office 365 for business</h3>
+          <p>
+            Run and grow your business with best-in-class Office apps,
+            intelligent cloud services, and advanced security.
+          </p>
+          <a href="#"> Shop now <i class="fas fa-chevron-right"></i> </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div>
+          <img src="{% static 'images/microsoft/card6.jpeg' %}" alt="card" />
+          <h3>Built for the future</h3>
+          <p>
+            Buy now from the Microsoft Store: the new Surface collection for
+            businesses.
+          </p>
+          <a href="#"> Shop now <i class="fas fa-chevron-right"></i> </a>
+        </div>
+
+        <!-- Card 7 -->
+        <div>
+          <img src="{% static 'images/microsoft/card7.jpeg' %}" alt="card" />
+          <h3>Create an online classroom</h3>
+          <p>
+            Get expert tips on how to use Microsoft Teams—free to educators and
+            students—to create assignments, collaborate virtually, and more.
+          </p>
+          <a href="#"> Learn more <i class="fas fa-chevron-right"></i> </a>
+        </div>
+
+        <!-- Card 8 -->
+        <div>
+          <img src="{% static 'images/microsoft/card8.jpeg' %}" alt="card" />
+          <h3>Azure Kinect DK</h3>
+          <p>
+            A development kit to create advanced models of machine vision and
+            speech.
+          </p>
+          <a href="#"> Explore now <i class="fas fa-chevron-right"></i> </a>
+        </div>
+      </section>
+
+      <!-- Webinars -->
+      <section class="webinar">
+        <div class="content">
+          <h2>Webinar series</h2>
+          <p>
+            How digital learning works
+          </p>
+          <a href="#" class="btn"
+            >Learn more <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+      </section>
+
+      <!-- Follow -->
+      <section class="follow">
+        <p>Follow Microsoft</p>
+        <a href="#"><img src="{% static 'images/microsoft/facebook.svg' %}" alt=""></a>
+        <a href="#"><img src="{% static 'images/microsoft/instagram.svg' %}" alt=""></a>
+        <a href="#"><img src="{% static 'images/microsoft/linkedin.svg' %}" alt=""></a>
+        <a href="#"><img src="{% static 'images/microsoft/twitter.svg' %}" alt=""></a>
+        <a href="#"><img src="{% static 'images/microsoft/youtube.svg' %}" alt=""></a>
+
+        </div>
+      </section>
+    </div>
+
+      <!-- Links -->
+      <section class="links">
+          <div class="links-inner">
+              <ul>
+                <li><h3>What's new</h3></li>
+                <li><a href="#">Microsoft 365</a></li>
+                <li><a href="#">Surface Pro X</a></li>
+                <li><a href="#">Surface Laptop 3</a></li>
+                <li><a href="#">Surface Pro 7</a></li>
+                <li><a href="#">Windows 10 apps</a></li>
+            </ul>
+                
+                <ul>
+                    <li><h3>Microsoft Store</h3></li>
+                    <li><a href="#">Account profile</a></li>
+                    <li><a href="#">Download Center</a></li>
+                    <li><a href="#">Microsoft Store support</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order tracking</a></li>
+                    <li><a href="#">Store locations</a></li>
+                    <li><a href="#">Buy online, pick up in store</a></li>
+                    <li><a href="#">In-store events</a></li>
+                </ul>
+                
+                <ul>
+                    <li><h3>Education</h3></li>
+                    <li><a href="#">Microsoft in education</a></li>
+                    <li><a href="#">Office for students</a></li>
+                    <li><a href="#">Office 365 for schools</a></li>
+                    <li><a href="#">Deals for students & parents</a></li>
+                    <li><a href="#">Microsoft Azure in education</a></li>
+            </ul>
+
+                <ul>
+                    <li><h3>Enterprise</h3></li>
+                    <li><a href="#">Azure</a></li>
+                    <li><a href="#">AppSource</a></li>
+                    <li><a href="#">Automotive</a></li>
+                    <li><a href="#">Government</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Manufacturing</a></li>
+                    <li><a href="#">Financial services</a></li>
+                    <li><a href="#">Retail</a></li>
+                </ul>
+                
+                <ul>
+                    <li><h3>Developer</h3></li>
+                    <li><a href="#">Microsoft Visual Studio</a></li>
+                    <li><a href="#">Windows Dev Center</a></li>
+                    <li><a href="#">TechNet</a></li>
+                    <li><a href="#">Microsoft developer program</a></li>
+                    <li><a href="#">Channel 9</a></li>
+                    <li><a href="#">Office Dev Center</a></li>
+                    <li><a href="#">Microsoft Garage</a></li>
+                </ul>
+
+                <ul>
+                    <li><h3>Company</h3></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Microsoft</a></li>
+                    <li><a href="#">Company news</a></li>
+                    <li><a href="#">Microsoft developer program</a></li>
+                    <li><a href="#">Privacy at Microsoft</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Diversity and inclusion</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+          </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+          <div class="footer-container">
+              <div class="language">
+                  <i class="fas fa-globe-africa fa-2x"></i>English (United States)
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Contact Microsoft</a></li>
+                        <li><a href="#">Privacy & Cookies</a></li>
+                        <li><a href="#">Term of use</a></li>
+                        <li><a href="#">Trademarks</a></li>
+                        <li><a href="#">Safety & eco</a></li>
+                        <li><a href="#">About our ads</a></li>
+                        <li><a href="#">&copy; Microsoft 2020</a></li>
+                    </ul>
+                </div>
+            </div>
+      </footer>
+      <script>
+        document.querySelector(".menu-btn").addEventListener("click",()=>
+              document.querySelector(".main-menu").classList.toggle('show')
+          )
+      </script>
+  </body>
+</html>

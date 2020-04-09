@@ -25,6 +25,9 @@ class Privacy(TemplateView):
     template_name = "privacy.html"
 
 
+class MicrosoftClone(TemplateView):
+    template_name="microsoft_clone/index.html"
+
 def contact_view(request):
     form = MailForm(request.POST)
     if not form.is_valid():
