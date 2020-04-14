@@ -37,7 +37,7 @@
 <div
   id="home"
   class="intro intro-single route bg-image"
-  style="background-image: url(/static/images/counters-bg.jpg)"
+  style="background-image: url(/static/images/counters-bg.jpg);"
 >
   <div class="overlay-itro"></div>
 </div>
@@ -78,7 +78,7 @@
                     Tags: {% for t in p.tags.all %}
                     <i class="devicon-{{t.value}}-plain colored"></i>
                     {% endfor %}<br />
-                    <span class="w-date">{{p.creation_date}}</span>
+                    <!-- <span class="w-date">{{p.creation_date}}</span> -->
                   </div>
                 </div>
                 <div class="col-sm-4">
